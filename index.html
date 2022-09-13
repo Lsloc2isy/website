@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset="utf-8">
+<title>李帅霖的主页</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+ 
+body {
+  font-family: Arial;
+  padding: 10px;
+  background-image:url('http://static.runoob.com/images/mix/paper.gif');
+  background-color:#cccccc;
+}
+ 
+/* 头部标题 */
+.header {
+  padding: 30px;
+  text-align: center;
+  background-color: rgb(243, 250, 243);
+}
+ 
+.header h1 {
+  font-size: 50px;
+}
+ 
+/* 导航条 */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+ 
+/* 导航条链接 */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+ 
+/* 链接颜色修改 */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+ 
+/* 创建两列 */
+/* Left column */
+.leftcolumn {   
+  float: left;
+  width: 65%;
+  margin-left: 100px;
+}
+/* 居中 */
+.center
+{
+	text-align:center;
+}
+/* 斜体 */
+p.oblique {font-style:oblique;}
+/* 右侧栏 */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  background-color: #f1f1f1;
+  padding-left: 20px;
+  
+}
+ 
+/* 图像部分 */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+}
+ 
+/* 文章卡片效果 */
+.card {
+  background-color: rgb(255, 255, 255);
+  padding: 20px;
+  margin-top: 20px;
+}
+ 
+/* 列后面清除浮动 */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+ 
+/* 底部 */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 20px;
+}
+ 
+/* 响应式布局 - 屏幕尺寸小于 800px 时，两列布局改为上下布局 */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+ 
+/* 响应式布局 -屏幕尺寸小于 400px 时，导航等布局改为上下布局 */
+@media screen and (max-width: 400px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+}
+</style>
+
+<script>
+  Date.prototype.format = function (fmt) {
+      var o = {
+          "y+": this.getFullYear, //年
+          "M+": this.getMonth() + 1, //月份
+          "d+": this.getDate(), //日
+          "h+": this.getHours(), //小时
+          "m+": this.getMinutes(), //分
+          "s+": this.getSeconds() //秒
+      };
+      if (/(y+)/.test(fmt)) fmt = fmt.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
+      for (var k in o)
+          if (new RegExp("(" + k + ")").test(fmt)) fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
+      return fmt;
+  }
+  setInterval("document.getElementById('dateTime').innerHTML = (new Date()).format('yyyy-MM-dd hh:mm:ss');", 1000);
+</script>
+
+</head>
+<body>
+
+<div class="header">
+  <h1>Welcome to Shuailin Li's Web site</h1>
+  <p id="dateTime"></p>
+</div>
+
+<div class="topnav">
+  <a href="#C1">Biography</a>
+  <a href="#C2">Hobby</a>
+  <a href="#C3" style="float:right">Reward</a>
+</div>
+
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <h2><a id="C1">Biography</a> </h2>
+      <p>Shuailin Li is a postgraduate in the <a href="https://sai.sysu.edu.cn/">School of Artificial Intelligence,Sun Yatsen University</a>(中山大学 人工智能学院),
+        supervised by Prof. <a href="http://zhenhuipeng.com/index.html">Zhenhui Peng</a>
+        Before that,he was a college student in the <a href="https://hd.hainanu.edu.cn/cs/">School of Computer Science and Technology,Hainan University</a>
+        and received his engineering bachlor from Hainan University in 2022.
+        His research interests are Human-Computer Interaction(HCI) and Natural Language Processing
+      </p>
+      <p>
+        Email: <a href="mailto:lishlin8@mail2.sysu.edu.cn">lishlin8@mail2.sysu.edu.cn</a>&nbsp;&nbsp;
+        <a href="doc/简历.pdf">Resume(Chinese)</a>
+      </p>
+    </div>
+    <div class="card">
+      <h2><a id="C2">Hobby</a></h2>
+      <p><img src="doc/travel.jpg" width="600" height="400"></p>
+      <p>In spare time,I would like to go travelling.This is the phtot I took in Qinghai Lake</p>
+      <p><img src="doc/gym.jpg" width="600" height="400"></p>
+      <p>I also like to work out at the gym</p>
+   
+    </div>
+  </div>
+  <div class="rightcolumn">
+    <div class="card">
+      <h2>Photo</h2>
+        <div class="center"><img src="doc/photo.jpg" width="200" height="200"></div>
+    </div>
+    <div class="card">
+      <h2><a id="C3">Reward</a> </h2>
+      <p class="oblique">Won the first prize of the National College Students Mathematical Contest in Modelling in Hainan provience in 2020</p>
+      <p class="oblique">Won the first prize in the game category of the Computer Design competition in Hainan provience in 2021</p>
+      <p class="oblique">Won the third prize in the Programming Ladder competition in Hainan provience in 2021</p>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <h2>Thank you for looking</h2>
+</div>
+
+</body>
+</html>
