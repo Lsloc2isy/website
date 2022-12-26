@@ -8,31 +8,31 @@
 * {
   box-sizing: border-box;
 }
- 
+
 body {
   font-family: Arial;
   padding: 10px;
   background-image:url('http://static.runoob.com/images/mix/paper.gif');
   background-color:#cccccc;
 }
- 
+
 /* 头部标题 */
 .header {
   padding: 30px;
   text-align: center;
   background-color: rgb(243, 250, 243);
 }
- 
+
 .header h1 {
   font-size: 50px;
 }
- 
+
 /* 导航条 */
 .topnav {
   overflow: hidden;
   background-color: #333;
 }
- 
+
 /* 导航条链接 */
 .topnav a {
   float: left;
@@ -42,16 +42,16 @@ body {
   padding: 14px 16px;
   text-decoration: none;
 }
- 
+
 /* 链接颜色修改 */
 .topnav a:hover {
   background-color: #ddd;
   color: black;
 }
- 
+
 /* 创建两列 */
 /* Left column */
-.leftcolumn {   
+.leftcolumn {
   float: left;
   width: 65%;
   margin-left: 100px;
@@ -69,9 +69,9 @@ p.oblique {font-style:oblique;}
   width: 25%;
   background-color: #f1f1f1;
   padding-left: 20px;
-  
+
 }
- 
+
 /* 图像部分 */
 .fakeimg {
   background-color: #aaa;
@@ -79,21 +79,21 @@ p.oblique {font-style:oblique;}
   padding: 20px;
   text-align: center;
 }
- 
+
 /* 文章卡片效果 */
 .card {
   background-color: rgb(255, 255, 255);
   padding: 20px;
   margin-top: 20px;
 }
- 
+
 /* 列后面清除浮动 */
 .row:after {
   content: "";
   display: table;
   clear: both;
 }
- 
+
 /* 底部 */
 .footer {
   padding: 20px;
@@ -101,15 +101,15 @@ p.oblique {font-style:oblique;}
   background: #ddd;
   margin-top: 20px;
 }
- 
+
 /* 响应式布局 - 屏幕尺寸小于 800px 时，两列布局改为上下布局 */
 @media screen and (max-width: 800px) {
-  .leftcolumn, .rightcolumn {   
+  .leftcolumn, .rightcolumn {
     width: 100%;
     padding: 0;
   }
 }
- 
+
 /* 响应式布局 -屏幕尺寸小于 400px 时，导航等布局改为上下布局 */
 @media screen and (max-width: 400px) {
   .topnav a {
@@ -148,7 +148,8 @@ p.oblique {font-style:oblique;}
 <div class="topnav">
   <a href="#C1">Biography</a>
   <a href="#C2">Hobby</a>
-  <a href="#C3" style="float:right">Reward</a>
+  <a href="#C3" style="float:right">My Work</a>
+  <a href="#C4" style="float:right">Reward</a>
 </div>
 
 <div class="row">
@@ -172,7 +173,7 @@ p.oblique {font-style:oblique;}
       <p>In spare time,I would like to go travelling.This is the phtot I took in Qinghai Lake</p>
       <p><img src="doc/gym.jpg" width="600" height="400"></p>
       <p>I also like to work out at the gym</p>
-   
+
     </div>
   </div>
   <div class="rightcolumn">
@@ -181,20 +182,20 @@ p.oblique {font-style:oblique;}
         <div class="center"><img src="doc/photo.jpg" width="200" height="200"></div>
     </div>
     <div class="card">
-      <h2><a id="C3">Reward</a> </h2>
+      <h2><a id="C4">Reward</a> </h2>
       <p class="oblique">Won the first prize of the National College Students Mathematical Contest in Modelling in Hainan provience in 2020</p>
       <p class="oblique">Won the first prize in the game category of the Computer Design competition in Hainan provience in 2021</p>
       <p class="oblique">Won the third prize in the Programming Ladder competition in Hainan provience in 2021</p>
     </div>
 	<div class="card">
-      <h2>My Work</h2>
+      <h2><a id="C3">My Work</a></h2>
         <h3>第一阶段</h3>
           <p class="oblique">主要负责需求分析中的线下用户采访，PPT制作</p>
         <h3>第二阶段</h3>
-          <p class="oblique">主要负责使用mockup软件对小程序的中保真度原型的制作，PPT指针</p>
+          <p class="oblique">主要负责使用mockup软件对小程序的中保真度原型的制作，PPT制作</p>
         <h3>第三阶段</h3>
           <p class="oblique">主要负责参与微信小程序云开发，PPT答辩</p>
-    </div>		
+    </div>
   </div>
 </div>
 
